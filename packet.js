@@ -30,7 +30,7 @@ packet.fromBytes = function(b) {
 	// Now parse the packet-specific bytes
 	var pParser = packets[newPacket.preamble.packetType];
 	if (typeof pParser == 'undefined') {
-		console.log("Unknown packet type "+newPacket.preamble.packetType);
+		//console.log("Unknown packet type "+newPacket.preamble.packetType);
 	} else {
 		newPacket.packetTypeName = pParser.name;
 		newPacket.packetTypeShortName = pParser.shortname;
